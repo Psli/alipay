@@ -7,7 +7,7 @@ module Alipay
 
     def self.generate_params(params)
       query = params.sort.map do |key, value|
-        "#{key}=#{value}"
+        "#{key}=\"#{value}\""
       end.join('&')
     end
 
